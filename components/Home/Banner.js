@@ -1,9 +1,7 @@
-import Image from "next/image";
-import bannerImg from "../../Images/library.jpg";
 const Banner = () => {
   return (
-    <div className="">
-      <Image src={bannerImg} alt="" />
+    <div>
+      <img src="/Images/library.jpg" alt="" />
     </div>
   );
 };
