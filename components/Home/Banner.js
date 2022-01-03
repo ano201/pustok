@@ -1,10 +1,11 @@
-
+import Image from "next/image";
+import bannerImg from "../../Images/library.jpg";
 const Banner = () => {
-    return (
-        <div>
-            <h1 className="text-center text-2xl text-red-600">Banner</h1>
-        </div>
-    );
+  return (
+    <div className="">
+      <Image src={bannerImg} alt="" />
+    </div>
+  );
 };
 
 export default Banner;
