@@ -32,13 +32,12 @@ const Navigation = () => {
           exit={{ y: "-100%", transition: { duration: 0.2 } }}
           transition={{
             duration: 0.4,
-            
             ease: [0.5, 1, 0.89, 1],
           }}
           className="w-screen h-14 z-50 bg-white/70 backdrop-filter backdrop-blur-lg shadow fixed"
         >
           <nav className=" bg-gray-100 text-gray-700 py-1">
-            <div className=" max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <div className="flex justify-between">
                 <div>
                   <Link href="/">

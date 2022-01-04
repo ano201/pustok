@@ -14,7 +14,7 @@ export default function Home({ setVisible }) {
         <Banner></Banner>
       </header>
       <main>
-        <section className="mt-28">
+        <section className="mt-4">
           <Latest></Latest>
         </section>
         <section className="mt-28">

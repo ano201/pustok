@@ -1,7 +1,13 @@
+import Card from "./Card";
 const Latest = () => {
   return (
-    <div>
-      <h1 className="text-center text-2xl text-red-600">Latest Update</h1>
+    <div className="bg-gray-100">
+      <h1 className="ml-2 text-2xl font-semibold text-gray-700">Latest Updated</h1>
+      <div className="max-w-6xl mx-auto flex justify-evenly flex-wrap">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
     </div>
   );
 };
