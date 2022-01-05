@@ -21,10 +21,13 @@ const Banner = () => {
       <div className="absolute top-0 flex items-center justify-center w-full h-full px-2">
         {/* classnames package should be install */}
         <div
-          className={classNames("bg-gray-500/60 text-gray-100 w-fit rounded-md", {
-            "font-semibold text-lg mx-auto p-8": large,
-            "text-xs p-2": !large,
-          })}
+          className={classNames(
+            "bg-gray-500/60 text-gray-100 w-fit rounded-md",
+            {
+              "font-semibold text-lg mx-auto p-8": large,
+              "text-xs p-2": !large,
+            }
+          )}
         >
           <div className="text-center">
             <h2>“The more that you read, the more things you will know.</h2>
