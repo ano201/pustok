@@ -69,7 +69,7 @@ const Navigation = () => {
                     </a>
                   </Link>
                 </div>
-                <div className="py-2">
+                <div className="pl-2 pr-4">
                   <div
                     className={classNames(
                       "text-right",
@@ -81,10 +81,12 @@ const Navigation = () => {
                       }
                     )}
                   >
-                    <FontAwesomeIcon
-                      onClick={() => setOpen(true)}
-                      icon={faBars}
-                    ></FontAwesomeIcon>
+                    <button>
+                      <FontAwesomeIcon
+                        onClick={() => setOpen(true)}
+                        icon={faBars}
+                      ></FontAwesomeIcon>
+                    </button>
                   </div>
                   <div
                     className={classNames(
@@ -97,10 +99,12 @@ const Navigation = () => {
                       }
                     )}
                   >
-                    <FontAwesomeIcon
-                      onClick={() => setOpen(false)}
-                      icon={faTimes}
-                    ></FontAwesomeIcon>
+                    <button>
+                      <FontAwesomeIcon
+                        onClick={() => setOpen(false)}
+                        icon={faTimes}
+                      ></FontAwesomeIcon>
+                    </button>
                   </div>
                   {open && (
                     <motion.div
@@ -137,6 +141,11 @@ const Navigation = () => {
                         <Link href="/contact">
                           <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
                             Contact
+                          </a>
+                        </Link>
+                        <Link href="/account">
+                          <a className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                            Sign In
                           </a>
                         </Link>
                       </div>

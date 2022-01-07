@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Banner from "../components/Home/Banner";
+import Categories from "../components/Home/Categories";
 import Review from "../components/Home/Review";
 import Latest from "./../components/Home/Latest";
 
@@ -16,6 +17,9 @@ export default function Home({ setVisible }) {
       <main>
         <section className="mt-4">
           <Latest></Latest>
+        </section>
+        <section className="mt-4">
+          <Categories></Categories>
         </section>
         <section className="mt-28">
           <Review></Review>

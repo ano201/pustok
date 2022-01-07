@@ -22,7 +22,7 @@ const Banner = () => {
         {/* classnames package should be install */}
         <div
           className={classNames(
-            "bg-gray-500/60 text-gray-100 w-fit rounded-md",
+            "bg-gray-500/40 text-gray-100 w-fit rounded-md",
             {
               "font-semibold text-lg mx-auto p-8": large,
               "text-xs p-2": !large,
