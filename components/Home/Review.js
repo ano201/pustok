@@ -1,7 +1,7 @@
 const Review = () => {
   return (
-    <div>
-      <h1 className="text-center text-2xl text-red-600">Review</h1>
+    <div className="bg-gray-100">
+      <h1 className="ml-2 text-2xl font-semibold text-gray-700">Review</h1>
     </div>
   );
 };

@@ -51,7 +51,7 @@ const Navigation = () => {
           }}
           className="w-screen h-14 z-50 bg-white/70 backdrop-filter backdrop-blur-lg shadow fixed"
         >
-          <nav className=" bg-gray-100 text-gray-700 py-1 pr-2">
+          <nav className=" bg-gray-100 text-gray-700 py-1 pr-2 pb-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex justify-between items-center">
                 <div>

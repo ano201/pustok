@@ -21,7 +21,7 @@ export default function Home({ setVisible }) {
         <section className="mt-4">
           <Categories></Categories>
         </section>
-        <section className="mt-28">
+        <section className="mt-4">
           <Review></Review>
         </section>
       </main>
