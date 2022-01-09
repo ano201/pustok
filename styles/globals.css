@@ -11,3 +11,38 @@ a {
 * {
   box-sizing: border-box;
 } */
+
+.loading {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.loading img {
+  z-index: 1;
+}
+.loading::before {
+  content: "";
+  width: 110%;
+  height: 10%;
+  position: absolute;
+  background-color: gainsboro;
+  animation: animate 2s linear infinite;
+}
+.loading::after {
+  content: "";
+  position: absolute;
+  inset: 100%;
+  background-color: none;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

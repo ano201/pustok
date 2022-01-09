@@ -51,7 +51,7 @@ const Navigation = () => {
           }}
           className="w-screen h-14 z-50 bg-white/70 backdrop-filter backdrop-blur-lg shadow fixed"
         >
-          <nav className=" bg-gray-100 text-gray-700 py-1 pr-2 pb-4">
+          <nav className=" bg-gray-200 text-gray-700 py-1 pr-2 pb-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex justify-between items-center">
                 <div>
@@ -120,7 +120,7 @@ const Navigation = () => {
                         })}
                       >
                         <Link href="/">
-                          <a className="content-center px-2 py-1 bg-gray-200 hover:bg-gray-400 duration-300 rounded">
+                          <a className="content-center px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
                             <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
                             &nbsp; &nbsp;
                             <span className="font-semibold text-2l">

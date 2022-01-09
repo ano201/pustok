@@ -17,7 +17,7 @@ const Categories = () => {
   // }, [width]);
 
   return (
-    <div className="bg-gray-300 py-4 relative">
+    <div className="bg-gray-100 py-4 relative">
       <h1 className="ml-2 text-2xl font-semibold text-stone-600">Categories</h1>
       <div className="max-w-6xl mx-auto flex justify-evenly flex-wrap">
         <Category></Category>
