@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       Cookies.set("name", "Murad");
       setTimeout(() => {
         router.reload(window.location.pathname);
-      }, 3000);
+      }, 4000);
     }
   }, []);
   return (

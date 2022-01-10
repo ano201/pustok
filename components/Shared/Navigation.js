@@ -133,6 +133,11 @@ const Navigation = () => {
                             Home
                           </a>
                         </Link>
+                        <Link href="/allCategories">
+                          <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                            Categories
+                          </a>
+                        </Link>
                         <Link href="/about">
                           <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
                             About
@@ -143,7 +148,7 @@ const Navigation = () => {
                             Contact
                           </a>
                         </Link>
-                        <Link href="/account">
+                        <Link href="/login">
                           <a className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
                             Sign In
                           </a>
