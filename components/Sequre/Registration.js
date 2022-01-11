@@ -2,20 +2,20 @@ import Link from "next/link";
 import { useState } from "react";
 import GoogleSignIn from "./GoogleSignIn";
 
-const Login = () => {
-  const [loginData, setLoginData] = useState({});
+const Registration = () => {
+  const [registrationData, setRegistrationData] = useState({});
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
+    const newRegistrationData = { ...registrationData };
+    newRegistrationData[field] = value;
+    setRegistrationData(newRegistrationData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData);
+    console.log(registrationData);
   };
 
   return (
@@ -63,22 +63,16 @@ const Login = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Sign In
+            Sign up
           </button>
-          <a
-            className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
-          >
-            Forgot Password?
-          </a>
         </div>
       </form>
       <div className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-center">
         <h1>
-          Do not have an account?{" "}
-          <Link href="registration">
+          Already have an account?{" "}
+          <Link href="login">
             <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
-              Sign Up
+              Log In
             </a>
           </Link>{" "}
           now.
@@ -94,4 +88,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Registration;
