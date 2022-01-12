@@ -6,8 +6,10 @@ import { useScrollDirection } from "./../../hooks/useScrollDirection";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
 import classNames from "classnames";
+import useAuth from "./../../hooks/useAuth";
 
 const Navigation = () => {
+  const { user, logout } = useAuth();
   const [visible, setVisible] = useState(true);
   const direction = useScrollDirection();
   const scrollingUp = direction == "up";
@@ -148,11 +150,20 @@ const Navigation = () => {
                             Contact
                           </a>
                         </Link>
-                        <Link href="/login">
-                          <a className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
-                            Sign In
-                          </a>
-                        </Link>
+                        {user?.email ? (
+                          <button
+                            onClick={logout}
+                            className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded"
+                          >
+                            Sign Out
+                          </button>
+                        ) : (
+                          <Link href="/login">
+                            <a className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                              Sign In
+                            </a>
+                          </Link>
+                        )}
                       </div>
                     </motion.div>
                   )}

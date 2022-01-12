@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import GoogleSignIn from "./GoogleSignIn";
+import useAuth from "./../../hooks/useAuth";
 
 const Registration = () => {
+  const { registerUser } = useAuth();
   const [registrationData, setRegistrationData] = useState({});
 
   const handleOnBlur = (e) => {
@@ -15,7 +17,7 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(registrationData);
+    registerUser(registrationData.email, registrationData.password);
   };
 
   return (
@@ -63,7 +65,7 @@ const Registration = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Sign up
+            Sign Up
           </button>
         </div>
       </form>
@@ -77,11 +79,7 @@ const Registration = () => {
           </Link>{" "}
           now.
         </h1>
-      </div>
-      <div className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-center">
         ---------- OR ----------
-      </div>
-      <div className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <GoogleSignIn></GoogleSignIn>
       </div>
     </div>

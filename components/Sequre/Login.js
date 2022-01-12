@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import GoogleSignIn from "./GoogleSignIn";
+import useAuth from "./../../hooks/useAuth";
 
 const Login = () => {
+  const { signInUser } = useAuth();
   const [loginData, setLoginData] = useState({});
 
   const handleOnBlur = (e) => {
@@ -15,7 +17,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData);
+    signInUser(loginData.email, loginData.password);
   };
 
   return (
@@ -83,11 +85,7 @@ const Login = () => {
           </Link>{" "}
           now.
         </h1>
-      </div>
-      <div className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-center">
         ---------- OR ----------
-      </div>
-      <div className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <GoogleSignIn></GoogleSignIn>
       </div>
     </div>
