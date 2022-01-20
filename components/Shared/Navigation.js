@@ -21,7 +21,7 @@ const Navigation = () => {
   const size = useWindowSize();
 
   useEffect(() => {
-    if (size.width >= 800) {
+    if (size.width >= 905) {
       setLarge(true);
       setOpen(true);
     } else {
@@ -115,56 +115,65 @@ const Navigation = () => {
                         y: 3,
                       }}
                     >
-                      <div
+                      <ul
                         className={classNames("flex justify-between", {
                           "items-center": large,
                           "flex-col": !large,
                         })}
                       >
-                        <Link href="/">
-                          <a className="content-center px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
-                            <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-                            &nbsp; &nbsp;
-                            <span className="font-semibold text-2l">
-                              Search
-                            </span>
-                          </a>
-                        </Link>
-                        <Link href="/">
-                          <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
-                            Home
-                          </a>
-                        </Link>
-                        <Link href="/allCategories">
-                          <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
-                            Categories
-                          </a>
-                        </Link>
-                        <Link href="/about">
-                          <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
-                            About
-                          </a>
-                        </Link>
-                        <Link href="/contact">
-                          <a className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
-                            Contact
-                          </a>
-                        </Link>
-                        {user?.email ? (
-                          <button
-                            onClick={logout}
-                            className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded"
-                          >
-                            Sign Out
-                          </button>
-                        ) : (
-                          <Link href="/login">
-                            <a className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
-                              Sign In
-                            </a>
+                        <li className="content-center px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                          <Link href="/">
+                            <>
+                              <FontAwesomeIcon
+                                icon={faSearch}
+                              ></FontAwesomeIcon>
+                              &nbsp; &nbsp;
+                              <span className="font-semibold text-2l">
+                                Search
+                              </span>
+                            </>
                           </Link>
+                        </li>
+                        <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                          <Link href="/">Home</Link>
+                        </li>
+                        <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                          <Link href="/allCategories">Categories</Link>
+                        </li>
+                        <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                          <Link href="/about">About</Link>
+                        </li>
+                        <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                          <Link href="/contact">Contact</Link>
+                        </li>
+                        {user?.email && (
+                          <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
+                            <Link href="/dashboard">DashBoard</Link>
+                          </li>
                         )}
-                      </div>
+                        {user?.email ? (
+                          <li className="font-semibold cursor-help text-2l p-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                            <abbr className="no-underline" title="Sign Out">
+                              <button
+                                className="flex items-center justify-start "
+                                onClick={logout}
+                              >
+                                <img
+                                  src={user?.photoURL}
+                                  className="rounded-full w-7"
+                                  alt=""
+                                />
+                                &nbsp;
+                                {user?.displayName}
+                              </button>
+                            </abbr>
+                          </li>
+                        ) : (
+                          <li className="font-semibold text-2l px-2 py-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                            <Link href="/login">Sign In</Link>
+                          </li>
+                        )}
+                      </ul>
                     </motion.div>
                   )}
                 </div>

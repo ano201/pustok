@@ -1,0 +1,88 @@
+[debug] [2022-01-20T19:43:32.076Z] ----------------------------------------------------------------------
+[debug] [2022-01-20T19:43:32.079Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nazrul islam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-01-20T19:43:32.080Z] CLI Version:   10.1.0
+[debug] [2022-01-20T19:43:32.080Z] Platform:      win32
+[debug] [2022-01-20T19:43:32.080Z] Node Version:  v16.13.1
+[debug] [2022-01-20T19:43:32.081Z] Time:          Fri Jan 21 2022 01:43:32 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-01-20T19:43:32.081Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-20T19:43:32.155Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-20T19:43:32.155Z] > authorizing via signed-in user (ahmu689@gmail.com)
+[debug] [2022-01-20T19:43:32.155Z] [iam] checking project e-pustok for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-01-20T19:43:32.158Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-01-20T19:43:32.159Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-20T19:43:32.658Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 20 Jan 2022 19:43:33 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-20T19:43:32.740Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/e-pustok:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-01-20T19:43:34.368Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 20 Jan 2022 19:43:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1158","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-20T19:43:34.370Z] > refreshing access token with scopes: []
+[debug] [2022-01-20T19:43:34.370Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-20T19:43:34.849Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 20 Jan 2022 19:43:35 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-20T19:43:34.934Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/e-pustok [none]
+[debug] [2022-01-20T19:43:35.915Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/e-pustok 200
+[debug] [2022-01-20T19:43:35.916Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/e-pustok {"projectId":"e-pustok","projectNumber":"761659289066","displayName":"e-pustok","name":"projects/e-pustok","resources":{"hostingSite":"e-pustok"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'e-pustok'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-01-20T19:43:35.922Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-01-20T19:43:35.922Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-20T19:43:36.369Z] <<< HTTP RESPONSE 200 {"date":"Thu, 20 Jan 2022 19:43:37 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-20T19:43:36.472Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/e-pustok/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}],"cleanUrls":true},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-01-20T19:43:38.528Z] <<< HTTP RESPONSE 500 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 20 Jan 2022 19:43:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-20T19:43:38.528Z] <<< HTTP RESPONSE BODY {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-01-20T19:43:39.020Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Thu, 20 Jan 2022 19:43:39 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/e-pustok/versions",
+        "path": "/v1beta1/sites/e-pustok/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/e-pustok/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
