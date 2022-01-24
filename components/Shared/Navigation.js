@@ -152,10 +152,10 @@ const Navigation = () => {
                           </li>
                         )}
                         {user?.email ? (
-                          <li className="font-semibold cursor-help text-2l p-1 bg-gray-300 hover:bg-gray-400 duration-300 rounded">
+                          <li className="font-semibold text-2l p-1 duration-300 hover:bg-gray-400 rounded-lg overflow-hidden">
                             <abbr className="no-underline" title="Sign Out">
                               <button
-                                className="flex items-center justify-start "
+                                className="flex items-center font-semibold justify-start cursor-help"
                                 onClick={logout}
                               >
                                 <img

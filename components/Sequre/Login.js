@@ -79,9 +79,9 @@ const Login = () => {
         <h1>
           Do not have an account?{" "}
           <Link href="registration">
-            <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
+            <button className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
               Sign Up
-            </a>
+            </button>
           </Link>{" "}
           now.
         </h1>
