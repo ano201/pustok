@@ -15,9 +15,12 @@ const Dashbar = () => {
 
   return (
     <div>
-      <ul className="list-none bg-slate-800 py-3 flex justify-center text-white">
-        <li>
+      <ul className="list-none bg-slate-800 py-4 flex justify-center items-center text-white">
+        <li className="px-2 border rounded">
           <Link href="/dashboard/addAWriter">Add Writer</Link>
+        </li>
+        <li className="px-2 border rounded">
+          <Link href="/dashboard/addABook">Add Book</Link>
         </li>
       </ul>
     </div>
