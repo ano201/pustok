@@ -138,7 +138,7 @@ const Navigation = () => {
                           <Link href="/">Home</Link>
                         </li>
                         <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
-                          <Link href="/allCategories">Categories</Link>
+                          <Link href="/allCategories/english">Categories</Link>
                         </li>
                         <li className="font-semibold text-2l px-2 py-1 hover:bg-gray-400 duration-300 rounded">
                           <Link href="/about">About</Link>

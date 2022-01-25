@@ -1,24 +1,20 @@
-const Card = () => {
+const Card = ({ booksData }) => {
+  const { book, image } = booksData;
+  console.log(booksData);
+
   return (
     <div style={{ width: "18rem" }}>
       <figure className="rounded-xl p-8 text-gray-100 bg-stone-600/80 my-6">
         <img
-          className="w-24 h-24 rounded-full mx-auto"
-          src="/Images/library.jpg"
+          style={{ width: "7rem", height: "12rem" }}
+          className="rounded mx-auto"
+          src={`data:image/png;base64,${image}`}
           alt=""
-          width="384"
-          height="512"
         />
         <div className="pt-6 space-y-4">
-          <blockquote>
-            <p className="text-lg font-medium">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </blockquote>
           <figcaption className="font-medium">
-            <div className="text-sky-500 dark">Sarah Dayan</div>
-            <div>Staff Engineer, Algolia</div>
+            <div className="text-sky-500 dark">{book.name}</div>
+            <div>{book.writer}</div>
           </figcaption>
         </div>
       </figure>

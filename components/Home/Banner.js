@@ -19,7 +19,6 @@ const Banner = () => {
     <div className="relative">
       <img className="w-full" src="/Images/library.jpg" alt="" />
       <div className="absolute top-0 flex items-center justify-center w-full h-full px-2">
-        {/* classnames package should be install */}
         <div
           className={classNames(
             "bg-gray-500/40 text-gray-100 w-fit rounded-md",
@@ -34,9 +33,7 @@ const Banner = () => {
             <h2>The more that you learn, the more places you&apos;ll go.”</h2>
           </div>
           <div className="text-center mt-8">
-            <h2>
-              <h4>Dr. Seuss__</h4>
-            </h2>
+            <h2>Dr. Seuss__</h2>
           </div>
         </div>
       </div>

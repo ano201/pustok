@@ -18,6 +18,7 @@ const AddABook = () => {
   }, []);
 
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -27,16 +28,18 @@ const AddABook = () => {
     setBooksData(newBooksData);
   };
 
-  const handleImage = (e) => {
+  const handlePdf = (e) => {
     setPdf(e.target.files[0]);
   };
 
-  const handlePdf = (e) => {
+  const handleImage = (e) => {
     setImage(e.target.files[0]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setLoading(true);
 
     const formData = new FormData();
 
@@ -156,6 +159,22 @@ const AddABook = () => {
             </button>
           </div>
         </form>
+        {loading && (
+          <div className="flex justify-center items-center">
+            <div
+              className="spinner-border
+              animate-spin
+              inline-block
+              w-24 h-24 border-8
+              rounded
+              border border-purple-500
+              "
+              role="status"
+            >
+              <span className="hidden">Uploading...Your...Book...</span>
+            </div>
+          </div>
+        )}
         {success && (
           <div
             className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
