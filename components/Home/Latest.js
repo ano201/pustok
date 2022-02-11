@@ -6,7 +6,7 @@ const Latest = () => {
   const [lastNum, setLastNum] = useState(0);
 
   useEffect(() => {
-    fetch("https://rocky-lake-30366.herokuapp.com/books")
+    fetch("http://localhost:5000/books")
       .then((res) => res.json())
       .then((data) => {
         setBooks(data);

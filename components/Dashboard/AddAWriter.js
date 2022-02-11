@@ -27,7 +27,7 @@ const AddAWriter = () => {
     formData.append("name", writersData.name);
     formData.append("image", image);
 
-    fetch("https://rocky-lake-30366.herokuapp.com/writers", {
+    fetch("http://localhost:5000/writers", {
       method: "POST",
       body: formData,
     })

@@ -6,7 +6,7 @@ const AddABook = () => {
 
   const [writers, setWriters] = useState([]);
   useEffect(() => {
-    fetch("https://rocky-lake-30366.herokuapp.com/writers")
+    fetch("http://localhost:5000/writers")
       .then((res) => res.json())
       .then((data) => {
         setWriters(data);
@@ -48,7 +48,7 @@ const AddABook = () => {
 
     formData.append("image", image);
 
-    fetch("https://rocky-lake-30366.herokuapp.com/books", {
+    fetch("http://localhost:5000/books", {
       method: "POST",
       body: formData,
     })
