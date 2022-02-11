@@ -3,7 +3,7 @@ const Card = ({ booksData }) => {
 
   return (
     <div className="rounded-xl text-gray-100 bg-stone-500/80 my-6">
-      <figure className="p-8" style={{ width: "18rem" }}>
+      <figure className="p-7" style={{ width: "14rem" }}>
         <img
           style={{ width: "7rem", height: "12rem" }}
           className="rounded mx-auto"
