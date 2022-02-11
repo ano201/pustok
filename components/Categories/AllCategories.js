@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Bar from "./Bar";
 const AllCategories = () => {
   return (

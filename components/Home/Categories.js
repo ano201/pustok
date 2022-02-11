@@ -7,7 +7,7 @@ const Categories = () => {
   const [lastNum, setLastNum] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/writers")
+    fetch("https://rocky-lake-30366.herokuapp.com/writers")
       .then((res) => res.json())
       .then((data) => {
         setWriters(data);

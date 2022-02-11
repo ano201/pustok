@@ -1,10 +1,9 @@
 const Card = ({ booksData }) => {
   const { book, image } = booksData;
-  console.log(booksData);
 
   return (
-    <div style={{ width: "18rem" }}>
-      <figure className="rounded-xl p-8 text-gray-100 bg-stone-600/80 my-6">
+    <div className="rounded-xl text-gray-100 bg-stone-500/80 my-6">
+      <figure className="p-8" style={{ width: "18rem" }}>
         <img
           style={{ width: "7rem", height: "12rem" }}
           className="rounded mx-auto"
@@ -13,7 +12,7 @@ const Card = ({ booksData }) => {
         />
         <div className="pt-6 space-y-4">
           <figcaption className="font-medium">
-            <div className="text-sky-500 dark">{book.name}</div>
+            <div className="text-slate-800 font-bold">{book.name}</div>
             <div>{book.writer}</div>
           </figcaption>
         </div>
