@@ -189,7 +189,7 @@ const AddABook = () => {
               inline-block
               w-24 h-24 border-8
               rounded
-              border border-purple-500
+             border-purple-500
               "
               role="status"
             >
