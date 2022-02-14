@@ -1,9 +1,14 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
+import { useRouter } from "next/router";
 
-const Book = ({ id }) => {
+const Book = () => {
   const [bookData, setBookData] = useState({});
+
+  const router = useRouter();
+  const { id } = router.query;
+  console.log(id);
 
   useEffect(() => {
     fetch(`http://localhost:5000/book/${id}`)
@@ -82,10 +87,6 @@ const Book = ({ id }) => {
       )}
     </div>
   );
-};
-
-export const getServerSideProps = (context) => {
-  return { props: { id: context.params.id } };
 };
 
 export default Book;
